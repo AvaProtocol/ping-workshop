@@ -65,11 +65,14 @@ cumulus-primitives-utility = { git = 'https://github.com/paritytech/cumulus', br
 parachain-info = { git = 'https://github.com/paritytech/cumulus', branch = 'polkadot-v0.9.8', default-features = false }
 
 # Polkadot Dependencies
-polkadot-parachain = { git = 'https://github.com/paritytech/polkadot', branch = 'release-v0.9.8', default-features = false }
-xcm = { git = 'https://github.com/paritytech/polkadot', branch = 'release-v0.9.8', default-features = false }
-xcm-builder = { git = 'https://github.com/paritytech/polkadot', branch = 'release-v0.9.8', default-features = false }
-xcm-executor = { git = 'https://github.com/paritytech/polkadot', branch = 'release-v0.9.8', default-features = false }
-pallet-xcm = { git = 'https://github.com/paritytech/polkadot', branch = 'release-v0.9.8', default-features = false }
+polkadot-parachain = { git = 'https://github.com/imstar15/polkadot', branch = 'release-v0.9.8', default-features = false }
+xcm = { git = 'https://github.com/imstar15/polkadot', branch = 'release-v0.9.8', default-features = false }
+xcm-builder = { git = 'https://github.com/imstar15/polkadot', branch = 'release-v0.9.8', default-features = false }
+xcm-executor = { git = 'https://github.com/imstar15/polkadot', branch = 'release-v0.9.8', default-features = false }
+pallet-xcm = { git = 'https://github.com/imstar15/polkadot', branch = 'release-v0.9.8', default-features = false }
+
+# Custom Dependencies
+cumulus-ping = { git = 'https://github.com/paritytech/cumulus', branch = 'polkadot-v0.9.8', default-features = false }
 
 [features]
 default = ['std']
