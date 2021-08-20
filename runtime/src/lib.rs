@@ -445,6 +445,13 @@ impl template::Config for Runtime {
 	type Event = Event;
 }
 
+impl cumulus_ping::Config for Runtime {
+	type Event = Event;
+	type Origin = Origin;
+	type Call = Call;
+	type XcmSender = XcmRouter;
+}
+
 // Create the runtime by composing the FRAME pallets that were previously configured.
 construct_runtime!(
 	pub enum Runtime where
@@ -475,6 +482,9 @@ construct_runtime!(
 
 		//Template
 		TemplatePallet: template::{Pallet, Call, Storage, Event<T>},
+
+    // Spambot
+    Spambot: cumulus_ping::{Pallet, Call, Storage, Event<T>} = 99,
 	}
 );
 
