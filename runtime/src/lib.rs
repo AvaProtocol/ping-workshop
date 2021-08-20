@@ -372,10 +372,18 @@ match_type! {
 	};
 }
 
+match_type! {
+	pub type SpecParachain: impl Contains<MultiLocation> = {
+		X2(Parent, Parachain(2000)) | X2(Parent, Parachain(2001))
+	};
+}
+
 pub type Barrier = (
 	TakeWeightCredit,
 	AllowTopLevelPaidExecutionFrom<All<MultiLocation>>,
+	// AllowUnpaidExecutionFrom<All<MultiLocation>>,
 	AllowUnpaidExecutionFrom<ParentOrParentsUnitPlurality>,
+	AllowUnpaidExecutionFrom<SpecParachain>,
 	// ^^^ Parent & its unit plurality gets free execution
 );
 
